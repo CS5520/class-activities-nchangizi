@@ -5,12 +5,13 @@ type Headerprops = {
   name: string;
   version: number;
   theme: "light" | "dark";
+  children?: React.ReactNode;
 };
-export default function Header(props: Headerprops) {
-  console.log(props);
+export default function Header({ name, children }: Headerprops) {
   return (
     <View>
-      <Text>Welcome to {props.name}</Text>
+      <Text>Welcome to {name}</Text>
+      {children}
     </View>
   );
 }
