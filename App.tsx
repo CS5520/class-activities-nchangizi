@@ -7,9 +7,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Welcome to {appName}</Text>
       <StatusBar style="auto" />
-      <Header />
+      <Header name={appName} version={2} theme="dark" />
     </View>
   );
 }
